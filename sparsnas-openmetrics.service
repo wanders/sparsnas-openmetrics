@@ -1,0 +1,12 @@
+[Unit]
+Description=Sparsnäs openmetrics exporter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+# Change this to match the serial of the transmitter
+Environment="SERIAL=400547040"
+ExecStart=/usr/local/bin/sparsnas-openmetrics -vv ${SERIAL}
+
+[Install]
+WantedBy=multi-user.target

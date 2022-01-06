@@ -1,0 +1,20 @@
+[package]
+name = "sparsnas-openmetrics"
+version = "0.1.0"
+authors = ["Anders Waldenborg <anders@0x63.nu>"]
+edition = "2018"
+license = "Apache-2.0"
+repository = "https://github.com/wanders/sparsnas-openmetrics"
+
+
+[dependencies]
+rfm69 = { version = "0.4.1" }
+linux-embedded-hal = { version = "0.3.1", features = ["gpio_cdev"] }
+embedded-hal = "*"
+sparsnasdecode = { git = "https://github.com/wanders/sparsnasdecode" }
+tokio =  { version = "1.*", features = ["full"] }
+warp = "0.3"
+futures = "0.3"
+log = "0.4"
+stderrlog = "0.5"
+clap = "3.0.0-beta.5"
